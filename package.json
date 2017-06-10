@@ -1,0 +1,29 @@
+{
+  "name": "personalweb",
+  "version": "1.0.0",
+  "description": "my personal web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ginobilee/personalWeb.git"
+  },
+  "keywords": [
+    "personal",
+    "node",
+    "heroku"
+  ],
+  "dependencies": {
+	  "express": "*",
+	  "ejs":"*",
+	  "mongodb":"*"	  
+  },
+  "author": "lidongjie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ginobilee/personalWeb/issues"
+  },
+  "homepage": "https://github.com/ginobilee/personalWeb#readme"
+}
