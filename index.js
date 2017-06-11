@@ -1,11 +1,12 @@
-var express = require('express'),
-    ejs = require('ejs');
+var express = require('express');
 
 var app = express();
+app.set('views',__dirname+'/views');
+app.set('view engine','pug');
 app.set('port',(process.env.PORT || 80)); 
 
 	app.use(function(req,res){
-		res.end('hello');
+		res.render('index');
 	});
 
 app.listen(app.get('port'),function(){
