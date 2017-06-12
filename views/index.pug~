@@ -3,6 +3,14 @@ doctype html
 html
   head
     title Welcome!
+    link href='https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.css' rel='stylesheet'
 
   body
-    
+    #page.container
+    ul
+      li:a class='btn-primary' Home
+      li Portfolio
+      li Skills
+      li About me
+      li contact 
+

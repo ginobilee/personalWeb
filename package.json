@@ -16,9 +16,9 @@
     "heroku"
   ],
   "dependencies": {
-	  "express": "*",
-	  "ejs":"*",
-	  "mongodb":"*"	  
+    "express": "*",
+    "mongodb": "*",
+    "pug": "^2.0.0-rc.2"
   },
   "author": "lidongjie",
   "license": "ISC",
