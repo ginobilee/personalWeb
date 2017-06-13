@@ -3,14 +3,39 @@ doctype html
 html
   head
     title Welcome!
-    link href='https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.css' rel='stylesheet'
+    meta(name='viewport' content='width=content-width,initial-scale=1')
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+    link(href='./style.css' rel='stylesheet')
 
   body
-    #page.container
-    ul
-      li:a class='btn-primary' Home
-      li Portfolio
-      li Skills
-      li About me
-      li contact 
-
+    .container-fluid.content
+      .row.header
+          .col-md-3
+            p.authorName  李 东杰
+          .col-md-9.nav
+            span test
+            ul
+              li.item <a href=''>Home</a> /
+              li.item <a href=''>Portfolio</a> /
+              li.item Skills /
+              li.item About me /
+              li.item Contact  
+      .row
+        .col-md-4.portrait
+          <img src='https://raw.githubusercontent.com/ginobilee/personalWeb/master/public/portrait.jpg' class='img-responsive img-thumbnail' title='李东杰' alt='这里本该出现我的照片...' />
+        .col-md-8.intro
+          p 你好，我正在寻找一份前端开发的工作。
+          p 在此之前，我是一名国家公务人员。
+          p 我曾经为所在单位开发过展示性网站。
+          p 我在一个开源包上进行了二次开发，该开源包基于asp语言。
+          p 我用mysql搭建了新的数据库表，建设了新的后台管理平台，并用actionscript2.0实现了flash整站。
+          p 从2016年10月，我开始利用业余时间系统学习前端开发。
+          p 我以FreeCodeCamp challenges作为习题集，利用mdn作为参考源，系统学习了相关html/css基础知识，并深入学习了《JavaScript高级程序设计》一书。
+          p 我经常在github/stackoverflow/segmentfault/v2ex等社区上学习，关注前端方向前沿动态。
+          p 随着学习的深入，我掌握了常用框架库jQuery/Angular 1/React/d3.js的使用方法。
+          p 可以熟练使用git进行版本控制。
+          p 熟练使用chrome进行调试/性能分析。
+          p 熟悉http/tcp协议，能够使用node.js进行简单的后台开发。
+          p 来看看我的<a href=''>作品</a>或是<a href=''>简历</a>吧。
+          p 我认为自己具备了成为一名前端工程师的基本素质，现在渴望在实际工作中实践提高。
+          p 希望得到您的惠顾，谢谢！

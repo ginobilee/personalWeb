@@ -4,8 +4,9 @@ html
   head
     title Welcome!
     meta(name='viewport' content='width=content-width,initial-scale=1')
-    link(href='https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.css' rel='stylesheet')
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
     link(href='./style.css' rel='stylesheet')
+    <link href='http://cdn.webfont.youziku.com/webfonts/nomal/27166/46724/593fa395f629dd15c87b6d2e.css' rel='stylesheet' type='text/css' />
 
   body
     .container-fluid.content
@@ -13,15 +14,16 @@ html
           .col-md-3
             p.authorName  李 东杰
           .col-md-9.nav
-            ul
-              li.nav <a href=''>Home</a> /
-              li.nav <a href=''>Portfolio</a> /
-              li.nav Skills /
-              li.nav About me /
-              li.nav Contact  
+              .right
+                ul.navUl
+                  li.item <a href='' class='navBtn'><span class='english'>Home</span><span class='chinese hidden'>首页</span></a>
+                  li.item <a href='./portfolio' class='navBtn'><span class='english'>Portfolio</span><span class='chinese hidden'>作品</span></a>
+                  li.item <a href='' class='navBtn'><span class='english'>Skills</span><span class='chinese hidden'>技能</span></a>
+                  li.item <a href='' class='navBtn'><span class='english'>About me</span><span class='chinese hidden'>关于</span></a>                  
+                  li.item#last <a href='' class='navbtn'><span class='english'>Contact</span><span class='chinese hidden'>联系</span></a>                 
       .row
-        .col-md-4
-          img(src='https://raw.githubusercontent.com/ginobilee/personalWeb/master/public/portrait.jpg' class='portrait' title='李东杰' alt='这里本该出现我的照片...')
+        .col-md-4.portrait
+          <img src='https://raw.githubusercontent.com/ginobilee/personalWeb/master/public/portrait.jpg' class='img-responsive img-thumbnail' title='李东杰' alt='这里本该出现我的照片...' />
         .col-md-8.intro
           p 你好，我正在寻找一份前端开发的工作。
           p 在此之前，我是一名国家公务人员。
@@ -38,3 +40,4 @@ html
           p 来看看我的<a href=''>作品</a>或是<a href=''>简历</a>吧。
           p 我认为自己具备了成为一名前端工程师的基本素质，现在渴望在实际工作中实践提高。
           p 希望得到您的惠顾，谢谢！
+  script(src='./main.js')

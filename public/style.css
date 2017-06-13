@@ -9,6 +9,9 @@ a{
 	color: rgb(176,176,176);
 	text-decoration: none;
 }
+a:hover{
+	text-decoration: none;
+}
 
 /*header*/
 .header{
@@ -23,28 +26,84 @@ a{
 	text-align: center;
 	line-height: 86px;
 	margin: 0;
+	font-family:'TSSunOldb45c0471e6a1e';
 }
 .header a{
 	color: black;
 }
-div.nav{
+.nav{
 	text-align: right;
+	height:86px;
+	width: 100%;
+	font-size: 0.7em;
+}
+.right{
+	text-align: right;
+	width: 100%;
 }
 ul{
 	display: inline-block;
-	margin: 0;
+	position: relative;
+	top: 50%;
+	transform: translate(0,-50%);
 	margin-right: 30px;
+	text-align: center;
+	padding: 0;
 }
-li.nav{
+li.item{
 	display: inline-block;
-	padding-left: 10px;
-	line-height: 86px;
+	border-right: 1px dashed black;
+	text-align: center;
+	width: 56px;
+}
+#last{
+	border: none;
+}
+.item a{
+	display: inline-block;
+}
+.item span{
+	width:56px;
+}
+.hidden{
+	display: none;
+}
+.fadeout{
+	animation: 0.4s fadeout;
+	display: none;
+}
+.fadein{
+	animation: 0.4s fadein;
+	color: rgba(0,0,0,1);
+	display: inline-block;
+}
+@keyframes fadeout{
+	from {
+		color: rgba(0,0,0,1);
+	}
+	to {
+		color: rgba(0,0,0,0);
+	}
+}
+@keyframes fadein{
+	from {
+		color: rgba(0,0,0,0);
+	}
+	to {
+		color: rgba(0,0,0,1);
+	}
 }
 
 /*intro*/
-.portrait{
-	width:301px;
+.portrait img{
+	display: block;
+	position: relative;
+	width: 301px;
 	height: 401px;
+	top:50%;
+	left:50%;
+	margin-left:-150px; 
+	margin-top:-200px;
 }
 .intro{
 	padding:20px 40px 0 20px;
@@ -52,7 +111,7 @@ li.nav{
 	font-size: 0.9em;
 }
 .intro p{
-	padding-top: 14px;
+	padding-top: 11px;
 	margin: 0;
 	line-height: 24px;
 }
