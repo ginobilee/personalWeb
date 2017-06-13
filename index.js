@@ -7,7 +7,7 @@ app.set('port',(process.env.PORT || 8080));
 
 app.use(express.static(__dirname+'/public'));
 
-app.use('portfolio',function(req,res){
+app.get('/portfolio',function(req,res){
 	res.render('portfolio');
 });
 	app.use(function(req,res){
