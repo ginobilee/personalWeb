@@ -22,7 +22,7 @@ function toggleNav(event){
 	}
 }
 window.addEventListener('load',function(event){
-	var navUl = document.querySelector('ul');
-	navUl.addEventListener('mouseover',toggleNav,false);
-	navUl.addEventListener('mouseout',toggleNav,false);
+	var nav = document.querySelector('.nav');
+	nav.addEventListener('mouseover',toggleNav,false);
+	nav.addEventListener('mouseout',toggleNav,false);
 },false);

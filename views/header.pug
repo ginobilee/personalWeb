@@ -1,12 +1,23 @@
-.container-fluid.content
-  .row.header
-      .col-md-3
-        p.authorName  李 东杰
-      .col-md-9.nav
-          .right
-            ul.navUl
-              li.item <a href='./index' class='navBtn'><span class='english'>Home</span><span class='chinese hidden'>首页</span></a>
-              li.item <a href='./portfolio' class='navBtn'><span class='english'>Portfolio</span><span class='chinese hidden'>作品</span></a>
-              li.item <a href='' class='navBtn'><span class='english'>Skills</span><span class='chinese hidden'>技能</span></a>
-              li.item <a href='' class='navBtn'><span class='english'>About me</span><span class='chinese hidden'>关于</span></a>                  
-              li.item#last <a href='' class='navbtn'><span class='english'>Contact</span><span class='chinese hidden'>联系</span></a> 
+.author
+  p.authorName 李 东杰
+.nav
+  .item
+    a.navBtn(href='./home')
+      span.english Home
+      span.chinese.hidden 首页
+  .item
+    a.navBtn(href='./portfolio')
+      span.english portfolio
+      span.chinese.hidden 作品
+  .item
+    a.navBtn(href='./skills')
+      span.english Skills
+      span.chinese.hidden 技能
+  .item
+    a.navBtn(href='./about me')
+      span.english About me
+      span.chinese.hidden 关于
+  .item
+    a.navBtn(href='./contact')
+      span.english Contact
+      span.chinese.hidden 联系

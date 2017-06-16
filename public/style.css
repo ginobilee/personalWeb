@@ -1,117 +1,155 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
+
+*{
+  padding: 0px;
+  margin: 0px;
+}
 body{
-	margin:0;
-	padding:0;
-	background-color: #313131;
-	color: white
+  background-color: #313131;
+  color: white;
+  font-size: 20px;
 }
 a{
-	color: rgb(176,176,176);
-	text-decoration: none;
+  color: rgb(176,176,176);
+  text-decoration: none;
 }
 a:hover{
-	text-decoration: none;
+  text-decoration: none;
 }
 
+/*content layout*/
+.content{
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh; 
+}
 /*header*/
 .header{
-	height:86px;
-	color: black;
-	background-color: #858585;
-	font-family: Oswald;
+  height:86px;
+  color: black;
+  background-color: #858585;
+  font-family: Oswald;
+  flex:none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.author{
+  flex:none;
 }
 .authorName{
-	color: white;
-	font-size: 1.8em;
-	text-align: center;
-	line-height: 86px;
-	margin: 0;
-	font-family:'TSSunOldb45c0471e6a1e';
-}
-.header a{
-	color: black;
+  font-size: 1.8em;
+  font-family:'TSSunOldb45c0471e6a1e';
+  padding-left: 30px;
 }
 .nav{
-	text-align: right;
-	height:86px;
-	width: 100%;
-	font-size: 0.7em;
+  flex:none;
+  font-size: 0.7em;
+  display: flex;
+  justify-content: space-between;
 }
-.right{
-	text-align: right;
-	width: 100%;
+.item{
+  box-sizing: border-box;
+  border-right: 1px dashed black;
+  text-align: center;
+  min-width: 76px;
 }
-ul{
-	display: inline-block;
-	position: relative;
-	top: 50%;
-	transform: translate(0,-50%);
-	margin-right: 30px;
-	text-align: center;
-	padding: 0;
+.item:nth-child(5){
+  border:none; 
 }
-li.item{
-	display: inline-block;
-	border-right: 1px dashed black;
-	text-align: center;
-	width: 56px;
-}
-#last{
-	border: none;
-}
-.item a{
-	display: inline-block;
-}
-.item span{
-	width:56px;
+a.navBtn{
+  color: black;
+  text-align: center;
 }
 .hidden{
-	display: none;
+  display: none;
 }
 .fadeout{
-	animation: 0.4s fadeout;
-	display: none;
+  animation: 0.4s fadeout;
+  display: none;
 }
 .fadein{
-	animation: 0.4s fadein;
-	color: rgba(0,0,0,1);
-	display: inline-block;
+  animation: 0.4s fadein;
+  color: rgba(0,0,0,1);
+  display: inline-block;
 }
 @keyframes fadeout{
-	from {
-		color: rgba(0,0,0,1);
-	}
-	to {
-		color: rgba(0,0,0,0);
-	}
+  from {
+    color: rgba(0,0,0,1);
+  }
+  to {
+    color: rgba(0,0,0,0);
+  }
 }
 @keyframes fadein{
-	from {
-		color: rgba(0,0,0,0);
-	}
-	to {
-		color: rgba(0,0,0,1);
-	}
+  from {
+    color: rgba(0,0,0,0);
+  }
+  to {
+    color: rgba(0,0,0,1);
+  }
 }
 
-/*intro*/
+/*main*/
+.main{
+  flex:0 1 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+/*index*/
+.portrait{
+  margin: auto;
+  flex:0 1 auto;
+}
 .portrait img{
-	display: block;
-	position: relative;
-	width: 301px;
-	height: 401px;
-	top:50%;
-	left:50%;
-	margin-left:-150px; 
-	margin-top:-200px;
+  width: 301px;
+  height: 401px;
+  padding: 10px;
 }
 .intro{
-	padding:20px 40px 0 20px;
-	color: rgb(176,176,176);
-	font-size: 0.9em;
+  padding:20px 40px 0 20px;
+  color: rgb(176,176,176);
+  font-size: 0.9em;
+  margin: auto;
+  max-width: 700px;
+  flex: 0 1 auto;
 }
 .intro p{
-	padding-top: 11px;
-	margin: 0;
-	line-height: 24px;
+  padding-top: 11px;
+}
+
+/*footer*/
+.footer{
+  flex:none;
+}
+
+
+
+/*portfolio projects*/
+.stage{
+  text-align: center;
+  width: 90%;
+  margin: 20px auto;
+}
+ul.projects{
+  width: 100%;
+  letter-spacing: -4px;
+  font-size: 0px;
+  text-align: justify;
+  margin: 0px;
+  padding: 0px;
+  color: red;
+}
+li.project{
+  display: inline-block;
+  width: 250px;
+  height: 300px;
+  background-color: white;
+  text-align: center;
+  vertical-align: bottom;
+}
+img.single{
+  width:215px;
+  height:153px;
 }
