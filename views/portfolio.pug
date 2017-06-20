@@ -1,13 +1,58 @@
-doctype html
+extend layout
 
-html
-  head
-    title Welcome!
-    meta(name='viewport' content='width=content-width,initial-scale=1')
-    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
-    link(href='./style.css' rel='stylesheet')
-    <link href='http://cdn.webfont.youziku.com/webfonts/nomal/27166/46724/593fa395f629dd15c87b6d2e.css' rel='stylesheet' type='text/css' />
-    
-  body
-    .container-fluid.content 
-      <!-- #include file='header.pug' --> 
+block append main
+  .portContent
+      .cateBanner
+        a.cate.all.active(href='') All
+        a.cate.game(href='') Game
+        a.cate.chart(href='') Chart
+        a.cate.react(href='') React
+      .works
+        a.work.all.game.react(href='https://ginobilee.github.io/Dungeon-React/')
+            img(src='./dungeon.jpg')
+            p.title 地牢
+            p.description 一个简单的RPG小游戏，闯到第四层救出人质。
+        a.work.all.chart(href='https://ginobilee.github.io/NationalContiguity/')
+            img(src='./nc.jpg')
+            p.title 国家地理分布
+            p.description 展示了不同国家地理分布上的关系，清楚显示出一个国家地理上的邻居之众寡。
+        a.work.all.chart(href='https://ginobilee.github.io/D3MapTest/')
+            img(src='./meteGlobal.jpg')
+            p.title 陨石分布
+            p.description 显示了落在地球上的陨石的分布情况，可以查看陨石的大小／质量。
+        a.work.all.chart(href='https://ginobilee.github.io/HeatMapWithD3/')
+            img(src='./hm.jpg')
+            p.title 地表温度
+            p.description 显示了自1753年已来的地表温度变化，全球变热一目了然。
+        a.work.all.game.react(href='https://ginobilee.github.io/GameOfLife-React/')
+            img(src='./gl.jpg')
+            p.title 生命游戏
+            p.description 由英国数学家Conway设计的生命演化游戏，查看不同pattern的演化路径。
+        a.work.all.react(href='https://codepen.io/LeeDJ/full/ggzVvE')
+            img(src='./ffcleader.jpg')
+            p.title 排行榜
+            p.description FreeCodeCamp用户活动度排行榜，查看最近最活跃的用户。
+        a.work.all.game.jquery(href='https://ginobilee.github.io/Tic-Tac-Toe-Game/E')
+            img(src='./ttt.jpg')
+            p.title 井字棋
+            p.description 井字棋小游戏，可以两人对战，也可以与电脑对战，但可能你赢不了电脑。
+        a.work.all.chart(href='https://ginobilee.github.io/GDP-US-D3/')
+            img(src='./gdp.jpg')
+            p.title USA历年GDP
+            p.description 美国的历年GDP数据，直观感受物质经济大爆发。
+        a.work.all.game.angular(href='https://ginobilee.github.io/SimonGame/')
+            img(src='./sg.jpg')
+            p.title Simon Game
+            p.description 记忆小游戏，跟着提示点击，看你能走到哪一关。
+        a.work.all.chart(href='https://ginobilee.github.io/DopingInBicycleRacing/')
+            img(src='./dope.jpg')
+            p.title 躲不掉的兴奋剂
+            p.description 职业自行车比赛中的兴奋剂调查，顶级选手中清白者寥寥。
+        a.work.all.react(href='https://codepen.io/LeeDJ/full/GrxOXX')
+            img(src='./md.jpg')
+            p.title MarkDown编辑器
+            p.description 实时显示markdown语法的编辑效果。
+        a.work.all(href='https://codepen.io/LeeDJ/full/bBXrww')          
+            img(src='./calculator.jpg')
+            p.title 计算器
+            p.description 简单的计算器。

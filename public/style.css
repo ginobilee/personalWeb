@@ -3,42 +3,29 @@
   margin: 0px;
 }
 body{
-  background-color: #313131;
+  background-color: antiquewhite;
   color: white;
   font-size: 20px;
   font-family: sans-serif;
 }
 a{
-  color: rgb(176,176,176);
   text-decoration: none;
+  color: #dbdbdb;
 }
 a:hover{
   text-decoration: none;
 }
-
-/*content layout*/
-.content{
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow:column;
-  flex-flow: column;
-  -ms-min-height:100vh;
-  min-height: 100vh; 
+li{
+  list-style: none;
 }
 /*header*/
 .header{
+  width: 100%;
   height:86px;
-  color: black;
-  background-color: #858585;
+  color: #dbdbdb;
+  background-color: black;
   font-family: Oswald;
-  -webkit-flex:none;
-  -ms-flex:none;  
-  flex:none;
-  -webkit-box-flex:none;
-  -moz-box-flex:none;
+  position: fixed;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -91,7 +78,6 @@ a:hover{
   border:none; 
 }
 a.navBtn{
-  color: black;
   text-align: center;
 }
 .hidden{
@@ -126,6 +112,21 @@ a.navBtn{
   }
 }
 
+/*content layout*/
+.content{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow:column;
+  flex-flow: column;
+  -ms-min-height:100vh;
+  min-height: 100vh; 
+  -webkit-align-items: center;
+  align-items: center;
+  padding-top: 86px;
+}
 /*main*/
 .main{  
   -webkit-flex:0 1 100%;
@@ -152,12 +153,15 @@ a.navBtn{
 }
 .portrait img{
   width: 301px;
-  height: 401px;
+  height: 301px;
   padding: 10px;
+  background-color: white;
+  border-width: 1px;
+  border-radius:200px;
 }
 .intro{
   padding:20px 40px 0 20px;
-  color: rgb(176,176,176);
+  color: black;
   font-size: 0.9em;
   margin: auto;
   max-width: 700px;  
@@ -166,6 +170,7 @@ a.navBtn{
   flex:0 1 auto;
   -webkit-box-flex:0 1 auto;
   -moz-box-flex:0 1 auto;
+  margin-left:30px;
 }
 .intro p{
   padding-top: 11px;
@@ -180,32 +185,180 @@ a.navBtn{
   -moz-box-flex:none;
 }
 
-
-
 /*portfolio projects*/
-.stage{
+.portContent{
+  background-color: #343338;
+}
+.cateBanner{  
+  -webkit-align-self:stretch;
+  align-self: stretch;
+  height: 46px;
+  padding-top:15px;
+  padding-left:40px;
+  background-color: #222;
+  text-align: left;
+  margin:10px 90px 10px 90px;
+  border-top:5px solid #545456;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.cateBanner a{  
+  padding-left:20px;
+  color: #545456;
+}
+a.active{
+  color:#fff;
+}
+.works{  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  -webkit-flex-flow:row wrap;
+  flex-flow: row wrap;
+  margin-left:90px;
+  margin-right: 90px;
+  -webkit-justify-content:space-between;
+  justify-content: space-between;
+}
+.works a{
+}
+.work{
+  -webkit-flex:none;
+  -ms-flex:none;  
+  flex:none;
+  -webkit-box-flex:none;
+  -moz-box-flex:none;
+  width: 300px;
+  /*background-color: #2F2F31;*/
+  background-color: rgba(89, 89, 90, 0.68);
+  margin: 10px ;
+  padding: 10px;
   text-align: center;
-  width: 90%;
-  margin: 20px auto;
+  box-shadow: 5px 8px 5px 1px rgba(16,16,16,0.6);
+  height: 302px;
 }
-ul.projects{
-  width: 100%;
-  letter-spacing: -4px;
-  font-size: 0px;
-  text-align: justify;
-  margin: 0px;
-  padding: 0px;
-  color: red;
+.work p.title,p.description{
+  text-align: left;
+  color: #191313;
+  padding-left: 5px;
+  padding-top: 10px;
 }
-li.project{
+.work p.title{
+  font-size: 1.5em;
+  font-weight: 500;
+  font-family: helvetica;
+}
+.work p.description{
+  font-size: 0.8em;
+  font-family:Oswald;
+}
+.work img{
+  width: 300px;
+  height:171px;
+}
+
+/*about me*/
+.aboutme{
+}
+.aboutme h2{
+  padding-bottom: 20px;
+}
+.brief{
+  background-color: antiquewhite;
+  color: black;
+  border-bottom:1px white solid;
+  padding: 10vw 20vw;
+}
+.timeStamp{
+  font-size: 23px;
+  font-weight: 700;
+  color: lightsalmon;
+  margin-right: 20px;
+}
+.briefEvent{
+  /*text-indent: 2em;*/
+}
+.selfPromotion{
+  background-color: lightsalmon;
+  padding: 10vw 10vw;
+}
+h2.indent{
+  margin-left: 15px;
+}
+.ch{
   display: inline-block;
-  width: 250px;
-  height: 300px;
-  background-color: white;
-  text-align: center;
-  vertical-align: bottom;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  font-size: 18px;
 }
-img.single{
-  width:215px;
-  height:153px;
+.selfPromotion .ch{
+  width: 25%;
+}
+.selfPromotion h3{
+  font-size: 16px;
+  font-weight: 900;
+  color: #333;
+  padding-bottom: 15px;
+}
+.ch li{
+  padding-bottom: 10px;
+  color:#f2eded;
+  letter-spacing: 1px;
+  word-break: break-all;
+}
+
+.careerPlan{
+  padding:10vw 10vw;
+  background-color: slategray;
+  font-size: 18px;
+}
+.careerPlan h2{
+  color: lightsalmon;
+}
+.careerPlan .ch{
+  width: 20%;
+}
+.careerPlan h3{
+  font-size: 16px;
+  font-weight: 900;
+  color: #333;
+  padding-bottom: 15px;
+}
+.careerPlan .timeSpan{
+  padding-right: 10px;
+  color: lightsalmon;
+}
+
+/*contact me*/
+.contact{
+  /*center the contact box and make it responsive*/
+  width: 400px;
+  margin: 10vw 20vw;
+
+  /*give it a nice border*/
+  padding: 2em;
+  border: 1px solid white;
+  border-radius: 5px;
+
+  color: black;
+}
+.contact input,textarea{
+  display: block;
+  margin-top:1em;
+  width: 300px;
+  font-size: 1em;
+  border: 1px solid darkgrey;
+  border-radius: 2px;
+}
+.contact textarea{
+  height: 200px;
+}
+.contact button{
+  width: 100px;
+  margin-top: 1em;
+  margin-left: 10em;
+  font-size: 1em;
 }
