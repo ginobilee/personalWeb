@@ -362,3 +362,13 @@ h2.indent{
   margin-left: 10em;
   font-size: 1em;
 }
+
+/*thanks*/
+.thanks{
+  margin: 10vw 20vw;
+  font-size: 3em;
+  color: black;
+}
+.thanks p+p{
+  margin-top:50px;
+}
