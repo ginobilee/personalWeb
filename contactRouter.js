@@ -6,6 +6,19 @@ const contactRouter = express.Router();
 const uriDB = process.env.MONGODB_URI;
 exports = module.exports = contactRouter;
 
+const messageSchema = new mongoose.Schema({
+	user_name:{
+		type:String
+	},
+	user_email:{
+		type:String
+	},
+	user_message:{
+		type:String
+	}
+});
+const userMessage = mongoose.model('userMessage',messageSchema);
+
 contactRouter.get('',function(req,res){
 	res.render('contact');
 });
@@ -31,15 +44,3 @@ contactRouter.post('',function(req,res){
 	res.json(m);
 });
 
-const messageSchema = new mongoose.Schema({
-	user_name:{
-		type:String
-	},
-	user_email:{
-		type:String
-	},
-	user_message:{
-		type:String
-	}
-});
-const userMessage = mongoose.model('userMessage',messageSchema);
