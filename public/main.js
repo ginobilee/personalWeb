@@ -55,6 +55,6 @@ window.addEventListener('load',function(event){
 	nav.addEventListener('mouseover',toggleNav,false);
 	nav.addEventListener('mouseout',toggleNav,false);
 
-	var cateBanner = document.querySelector('.cateBanner');
-	cateBanner.addEventListener('click',changeCate,false);
+	//var cateBanner = document.querySelector('.cateBanner');
+	//cateBanner.addEventListener('click',changeCate,false);
 },false);

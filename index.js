@@ -29,4 +29,5 @@ app.use(function(req,res){
 
 app.listen(app.get('port'),function(){
 	console.log('The server is running now.');
+	console.log(process.env.MONGODB_URI);
 });
