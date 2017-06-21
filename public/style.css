@@ -70,9 +70,12 @@ li{
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;
   box-sizing: border-box;
-  border-right: 1px dashed black;
+  border-right: 1px dashed white;
   text-align: center;
   min-width: 76px;
+}
+.item:hover{
+  background-color: rgba(255,255,255,0.2);
 }
 .item:nth-child(5){
   border:none; 
