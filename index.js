@@ -23,9 +23,10 @@ app.get('/skills',function(req,res){
 app.get('/aboutme',function(req,res){
 	res.render('aboutme');
 });
-app.get('/secretdoor',listMessages);
+app.use('/secretdoor',listMessages);
 
 app.use('/contact',contactRouter);
+
 app.use(function(req,res){
 	res.render('index');
 });
