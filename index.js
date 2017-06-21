@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var contactRouter = require('./contactRouter');
-var listMessages = require('./listMessage');
+var listMessages = require('./listMessages');
 
 var app = express();
 
