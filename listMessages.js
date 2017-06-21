@@ -9,6 +9,7 @@ const listMessages = express.Router();
 exports = module.exports = listMessages;
 
 listMessages.get('',function(req,res){
+	console.log('lists');
 	mongoClient.connect(uriDB,function(err,db){
 		if(err){
 			console.log('ERROR connecting to db:'+err);

@@ -23,7 +23,7 @@ app.get('/skills',function(req,res){
 app.get('/aboutme',function(req,res){
 	res.render('aboutme');
 });
-app.get('/secret_door',listMessages);
+app.get('/secretdoor',listMessages);
 
 app.use('/contact',contactRouter);
 app.use(function(req,res){
