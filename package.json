@@ -4,7 +4,7 @@
   "description": "my personal web",
   "main": "index.js",
   "scripts": {
-    "test": "jshint contactRouter.js",
+    "test": "jshint contactRouter.js listMessages.js",
     "start": "node index.js"
   },
   "repository": {

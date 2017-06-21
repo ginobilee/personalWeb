@@ -1,5 +1,8 @@
+'use strict';
+
 const express = require('express'),
 	mongoClient = require('mongodb').MongoClient;
+const uriDB = process.env.MONGODB_URI;
 
 const listMessages = express.Router();
 

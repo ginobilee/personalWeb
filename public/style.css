@@ -337,6 +337,7 @@ h2.indent{
   /*center the contact box and make it responsive*/
   width: 400px;
   margin: 10vw 20vw;
+  margin-bottom: 20px;
 
   /*give it a nice border*/
   padding: 2em;
