@@ -17,8 +17,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.get('/portfolio',function(req,res){
 	res.render('portfolio');
 });
-app.get('/skills',function(req,res){
-	res.render('skills');
+app.get('/resume',function(req,res){
+	res.render('resume');
 });
 app.get('/aboutme',function(req,res){
 	res.render('aboutme');

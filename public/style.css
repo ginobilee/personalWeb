@@ -178,6 +178,9 @@ a.navBtn{
 .intro p{
   padding-top: 11px;
 }
+.intro a{
+  color: yellowgreen;
+}
 
 /*footer*/
 .footer{
