@@ -18,9 +18,11 @@ contactRouter.post('',function(req,res){
 			console.log('ERROR connecting to:'+uriDB);
 		}else{
 			console.log('connected');
-			newMessage.save(function(err){
+			newMessage.save(function(err,m){
 				if(err){
 					console.log('ERROR saving:'+err);
+				}else{
+					console.log('save successful:'+m);
 				}
 			});
 		}
