@@ -1,12 +1,38 @@
 'use strict';
 
 const express = require('express');
-const mongoose = require('mongoose');
+const mongoClient = require('mongodb').MongoClient;
+//const mongoose = require('mongoose');
 const contactRouter = express.Router();
 const uriDB = process.env.MONGODB_URI;
 exports = module.exports = contactRouter;
 
-const messageSchema = new mongoose.Schema({
+contactRouter.get('',function(req,res){
+	res.render('contact');
+});
+
+contactRouter.post('',function(req,res){
+	let m = req.body;
+	m.createDate = new Date();
+	mongoClient.connect(uriDB,function(err,db){
+		if(err){
+			console.log('ERROR connecting to the database:'+err);
+			return;
+		}
+		console.log('db connected');
+		db.collection('message').insertOne(m,function(err,doc){
+			if(err){
+				console.log('ERROE inserting to db:'+err);
+				res.end('error inserting');
+				return ;
+			}
+			res.json(doc);
+		});
+	});
+});
+
+/*
+ * const messageSchema = new mongoose.Schema({
 	user_name:{
 		type:String
 	},
@@ -43,4 +69,4 @@ contactRouter.post('',function(req,res){
 	//console.log(m);
 	res.json(m);
 });
-
+*/
