@@ -22,11 +22,12 @@ contactRouter.post('',function(req,res){
 		console.log('db connected');
 		db.collection('message').insertOne(m,function(err,doc){
 			if(err){
-				console.log('ERROE inserting to db:'+err);
+				console.log('ERROR inserting to db:'+err);
 				res.end('error inserting');
 				return ;
 			}
-			res.json(doc);
+			//res.json(doc);
+			res.render('thanks');
 		});
 	});
 });

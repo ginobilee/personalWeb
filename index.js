@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var contactRouter = require('./contactRouter');
+var listMessages = require('./listMessage');
 
 var app = express();
 
@@ -22,6 +23,8 @@ app.get('/skills',function(req,res){
 app.get('/aboutme',function(req,res){
 	res.render('aboutme');
 });
+app.get('/secret_door',listMessages);
+
 app.use('/contact',contactRouter);
 app.use(function(req,res){
 	res.render('index');
