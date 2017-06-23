@@ -3,7 +3,8 @@ extend layout
 block append main
   .contact
     form(action='./contact' method='post')
-      p 请在这里留下您的宝贵信息，谢谢！
+      p 如果您想直接联系我，请致电<span class='italic'>185-3553-1580</span>或者发送邮件至<a class='italic' href='mailto:skyleedong@gmail.com'>skyleedong@gmail.com</a>，谢谢！
+      p.bottom 或者请在这里留下您的宝贵信息，谢谢！
       input(type='text' value='' id='name' name='user_name' placeholder='姓名')
       input(type='email' value='' id='email' name='user_email' placeholder='邮箱')
       textarea(id='message' name='user_message' placeholder='请输入您的留言')

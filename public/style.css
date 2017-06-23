@@ -10,13 +10,18 @@ body{
 }
 a{
   text-decoration: none;
-  color: #dbdbdb;
 }
 a:hover{
   text-decoration: none;
 }
 li{
   list-style: none;
+}
+.italic{
+  font-style:italic; 
+}
+.black{
+  color: black;
 }
 /*header*/
 .header{
@@ -65,6 +70,7 @@ li{
   display: flex;
   -webkit-justify-content:space-between;
   justify-content: space-between;
+  margin-right: 1em;
 }
 .item{
   -webkit-box-sizing:border-box;
@@ -81,38 +87,11 @@ li{
   border:none; 
 }
 a.navBtn{
+  color: #dbdbdb;
   text-align: center;
 }
 .hidden{
   display: none;
-}
-.fadeout{
-  -webkit-animation:0.4s fadeout;
-  -moz-animation:0.4s fadeout;
-  -o-animation:0.4s fadeout;
-  animation: 0.4s fadeout;
-  display: none;
-}
-.fadein{
-  animation: 0.4s fadein;
-  color: rgba(0,0,0,1);
-  display: inline-block;
-}
-@keyframes fadeout{
-  from {
-    color: rgba(0,0,0,1);
-  }
-  to {
-    color: rgba(0,0,0,0);
-  }
-}
-@keyframes fadein{
-  from {
-    color: rgba(0,0,0,0);
-  }
-  to {
-    color: rgba(0,0,0,1);
-  }
 }
 
 /*content layout*/
@@ -153,6 +132,14 @@ a.navBtn{
   flex:0 1 auto;
   -webkit-box-flex:0 1 auto;
   -moz-box-flex:0 1 auto;
+  text-align: center;
+}
+.portrait p{
+  margin-top: 1em;
+  color: black;
+}
+.portrait a{
+  color: black;
 }
 .portrait img{
   width: 301px;
@@ -163,7 +150,7 @@ a.navBtn{
   border-radius:200px;
 }
 .intro{
-  padding:20px 40px 0 20px;
+  padding:2rem 2rem 0 1rem;
   color: black;
   font-size: 0.9em;
   margin: auto;
@@ -173,13 +160,15 @@ a.navBtn{
   flex:0 1 auto;
   -webkit-box-flex:0 1 auto;
   -moz-box-flex:0 1 auto;
-  margin-left:30px;
+  margin-left:1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.05rem;
 }
 .intro p{
-  padding-top: 11px;
+  padding-top: 1rem;
 }
 .intro a{
-  color: yellowgreen;
+  color: orangered;
 }
 
 /*footer*/
@@ -265,6 +254,33 @@ a.active{
   height:171px;
 }
 
+/*resume*/
+.resume{
+  width: 90%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: black;
+  font-size: 1rem;
+}
+.basicTitle{
+  border-bottom: 2px solid black;
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+}
+.detail{
+  padding: 0.5rem 2rem;
+}
+.basicInfo{
+  display: inline-block;
+  width: 50%;
+}
+.edu{
+  padding-top:1rem;
+}
+.bold{
+  font-weight: 900;
+}
+
 /*about me*/
 .aboutme{
 }
@@ -341,15 +357,18 @@ h2.indent{
 /*contact me*/
 .contact{
   /*center the contact box and make it responsive*/
-  width: 400px;
-  margin: 10vw 20vw;
-  margin-bottom: 20px;
+  width: 380px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
   /*give it a nice border*/
   padding: 2em;
   border: 1px solid white;
   border-radius: 5px;
 
+  color: black;
+}
+.contact a{
   color: black;
 }
 .contact input,textarea{
@@ -368,6 +387,9 @@ h2.indent{
   margin-top: 1em;
   margin-left: 10em;
   font-size: 1em;
+}
+.bottom{
+  padding-top: 1rem;
 }
 
 /*thanks*/
